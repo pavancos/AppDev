@@ -1,6 +1,8 @@
 package com.example.toasts_01;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,80 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Toast.makeText(
+                this,
+                "This is onCreate()",
+                Toast.LENGTH_SHORT
+        ).show();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(
+                this,
+                "This is onResume()",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(
+                this,
+                "This is onPause()",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(
+                this,
+                "This is onStop()",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(
+                this,
+                "This is onDestroy()",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(
+                this,
+                "This is onRestart()",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(
+                this,
+                "This is onStart()",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+
+    public void showText(View view){
+        Toast.makeText(
+                this,
+                "This is on Click",
+                Toast.LENGTH_SHORT
+        ).show();
+    }
+
+
 }
+
