@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
     android:padding="5dp"
     tools:context=".Frame" >
 
@@ -16,17 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:background="#ECEEE8"
-        android:hint="Enter your email"
-        android:padding="10dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:background="#ECEEE8"
-        android:hint="Enter password"
+        android:hint="Your Name:"
         android:padding="10dp" />
 
     <Button
