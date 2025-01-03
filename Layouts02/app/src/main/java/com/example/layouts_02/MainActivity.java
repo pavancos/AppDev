@@ -30,5 +30,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onTableClick(View vw) {
+        Intent intent = new Intent(this, Table.class);
+        startActivity(intent);
+    }
+
+    public  void onFrameClick(View vw) {
+        Intent intent = new Intent(this, Frame.class);
+        startActivity(intent);
+    }
+
+    public void onRelativeClick(View vw){
+        Intent intent = new Intent(this, Relative.class);
+        startActivity(intent);;
+    }
+
+    public void onTabClick(View vw){
+        Intent intent = new Intent(this, Tab.class);
+        startActivity(intent);
+    }
 
 }
