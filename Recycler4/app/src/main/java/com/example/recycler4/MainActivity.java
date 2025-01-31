@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    // Just Statically create a List and pass to adapter
     private void fetchTodos(){
         List<TodoItem> todoList = List.of(
                 new TodoItem("Todo 1"),
