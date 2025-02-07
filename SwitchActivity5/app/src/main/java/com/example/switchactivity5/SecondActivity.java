@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class SecondActivity extends AppCompatActivity {
     TextView profileUsername;
     Button goToPortfolio_btn;
+    Button mailSupport_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +34,21 @@ public class SecondActivity extends AppCompatActivity {
         profileUsername.setText(username);
         goToPortfolio_btn = findViewById(R.id.goToLink);
         goToPortfolio_btn.setOnClickListener(v-> GoToPortfolio());
+        mailSupport_btn = findViewById(R.id.mailSupport);
+        mailSupport_btn.setOnClickListener(v-> mailSupport());
 
     }
     public void GoToPortfolio(){
         Uri portfolioLink = Uri.parse("https://pavanc.me");
         Intent intent = new Intent(Intent.ACTION_VIEW, portfolioLink);
-        Log.d("DebugUsername", "Hello");
         startActivity(intent);
     }
+    public void mailSupport() {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:pavankc005@gmail.com"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Support Request");
+        intent.putExtra(Intent.EXTRA_TEXT, "Hello, I need help with...");
+        startActivity(intent);
+    }
+
 }
