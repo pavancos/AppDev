@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <Button
         android:id="@+id/switchToProfile"
         android:layout_width="305dp"
@@ -18,7 +17,6 @@
         android:layout_marginEnd="62dp"
         android:layout_marginBottom="488dp"
         android:text="Go to Profile" />
-
     <EditText
         android:id="@+id/usernameInput"
         android:layout_width="310dp"
