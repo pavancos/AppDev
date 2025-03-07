@@ -5,6 +5,9 @@ public class Student {
     private String name;
     private double cgpa;
 
+    public Student() {
+    }
+
     public Student(String rollNumber, String name, double cgpa) {
         this.rollNumber = rollNumber;
         this.name = name;

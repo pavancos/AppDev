@@ -41,7 +41,30 @@
         android:text="Insert Student"
         android:id="@+id/insert"
         android:layout_marginTop="10dp"/>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Students"
+        android:id="@+id/get"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Students"
+        android:textStyle="bold"
+        android:textSize="28sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/students"
+            android:orientation="vertical"
+            android:gravity="center" />
+    </ScrollView>
 
 
 </LinearLayout>
