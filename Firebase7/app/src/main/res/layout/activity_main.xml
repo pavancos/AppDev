@@ -47,6 +47,18 @@
         android:text="Get Students"
         android:id="@+id/get"
         android:layout_marginTop="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Student"
+        android:id="@+id/update"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Student"
+        android:id="@+id/delete"
+        android:layout_marginTop="10dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
