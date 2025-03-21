@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:gravity="center"
-    android:background="@color/black"
     android:orientation="horizontal"
     tools:context=".Linear">
 
@@ -22,9 +22,9 @@
         android:layout_height="58dp"
         android:elevation="@dimen/cardview_compat_inset_shadow"
         android:fontFamily="sans-serif-medium"
+        android:onClick="onOrientationClick"
         android:text="Change Orientation"
         android:textAlignment="center"
-        android:onClick="onOrientationClick"
         android:textAllCaps="false" />
 
     <ImageView
