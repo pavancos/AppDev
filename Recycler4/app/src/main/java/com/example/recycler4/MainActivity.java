@@ -22,33 +22,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.todoList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //fetchTodosFromAPI();
         fetchTodos();
-    }
-
-    private void fetchTodosFromAPI() {
-        ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        Call<List<TodoItem>> call = apiService.getTodos();
-
-        call.enqueue(new Callback<List<TodoItem>>() {
-            @Override
-            public void onResponse(Call<List<TodoItem>> call, Response<List<TodoItem>> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    List<TodoItem> todoList = response.body();
-                    adapter = new TodoAdapter(todoList.subList(0, 14));
-                    recyclerView.setAdapter(adapter);
-                    Log.d("API_RESPONSE", "Fetched Todos: " + response.body().size());
-                    for (TodoItem item : response.body()) {
-                        Log.d("TODO_ITEM","Title: " + item.getTitle());
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<TodoItem>> call, Throwable t) {
-                Log.e("API_ERROR", "Error fetching todos", t);
-            }
-        });
     }
     private void fetchTodos(){
         List<TodoItem> todoList = List.of(

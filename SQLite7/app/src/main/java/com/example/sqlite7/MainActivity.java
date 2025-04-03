@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
         deleteEventBtn.setOnClickListener(v->{
             deleteEvent();
         });
-
-
     }
 
     public void addEvent(){

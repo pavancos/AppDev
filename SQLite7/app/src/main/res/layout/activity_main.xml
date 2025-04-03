@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layerType="none"
     tools:context=".MainActivity">
 
     <TextView
@@ -23,89 +22,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.122" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventName">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/eventName"
-        android:layout_width="378dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="Event Name"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
 
     <EditText
         android:id="@+id/editDate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="6dp"
-        android:autofillHints="creditCardExpirationDate"
-        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:hint="Select Date"
         android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventDateLabel" />
-
-    <TextView
-        android:id="@+id/eventDateLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:text="Event Date"
-        android:textSize="20sp"
-        android:labelFor="@+id/editDate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/eventName" />
+        app:layout_constraintTop_toBottomOf="@+id/eventName" />
 
     <Button
         android:id="@+id/CreateButton"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="16dp"
         android:text="Create Event"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDate" />
 
     <Button
         android:id="@+id/ShowEvents"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="16dp"
         android:text="Show Events"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editDate" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CreateButton" />
 
     <Button
         android:id="@+id/UpdateEvent"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="16dp"
         android:text="Update Event"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editDate" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowEvents" />
 
     <Button
         android:id="@+id/DeleteEvents"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="16dp"
         android:text="Delete Events"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editDate" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateEvent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
